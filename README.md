@@ -7,7 +7,29 @@
 
 
 ##### 1) Definição
+##### 2) Diagrama
   
+ ```mermaid
+graph TD;
+ atualizacaoPagamentosJob-->
+
+ ultimosPagamentosStep_01 -->ultimosPagamentosReader;
+ ultimosPagamentosStep_01 -->ultimosPagamentosProcessor;
+ ultimosPagamentosStep_01 -->ultimosPagamentosWriter;
+
+ atualizacaoPagamentosJob-->
+ acordosPagosStep_02 -->acordosPagosReader;
+ acordosPagosStep_02 -->acordosPagosProcessor;
+ acordosPagosStep_02 -->acordosPagosCompositeWriter;
+
+ atualizacaoPagamentosJob-->
+ atualizacaoLoteFaturaPagaStep_03 -->atualizacaoLoteFaturaPagaReader;
+ atualizacaoLoteFaturaPagaStep_03 -->AtualizacaoLoteFaturaPagaProcessor;
+ atualizacaoLoteFaturaPagaStep_03 -->atualizacaoLoteFaturaPagaWriter;
+
+```
+
+##### 3) Jsoncrack
    <p>  Link Jsoncrack  <a href="https://jsoncrack.com/editor">jsoncrack</a></p>
 
 ```json
@@ -16,7 +38,7 @@
 ```
 ![image](src/assets/to_readme/acordo-ressarcimento-batch.jpeg)
 
-  
+
  
 
 
